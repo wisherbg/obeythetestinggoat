@@ -24,7 +24,7 @@ class HomePageTest(TestCase):
     self.client.get('/')
     self.assertEqual(Item.objects.count(), 0)
 
-  def test_displas_all_list_items(self):
+  def test_displays_all_list_items(self):
     Item.objects.create(text='First Item')
     Item.objects.create(text='Second Item')
     response = self.client.get('/')
